@@ -314,7 +314,8 @@ rootfolder = pwd;   % 현재 작업폴더 위치 설정
            rotate(bb,[0,0,1],1);
            rotate(cc,[0,0,1],1);
            rotate(dd,[0,0,1],1);
-           view(90+phi_R(j+1),90-theta_R(k+1)); % - 바꾸기
+           %view(90+phi_R(j+1),90-theta_R(k+1)); % - 바꾸기
+           campos([1,1,1])
            filename = sprintf('center_Slice_view(%d,%d)_%d deg',theta_R(k+1),phi_R(j+1),i);    
            print(filename,'-dpng','-r300');
         end
